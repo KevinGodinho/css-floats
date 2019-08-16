@@ -1,0 +1,41 @@
+/*-----HEADER SOCIAL ICONS-----*/
+
+// when positioning an element absolutely, you have to position its parent relative first
+header {
+	position: relative;
+    ul.social {
+        position: absolute;
+        bottom: .5rem;
+        right: $gutter;
+    }
+    ul.social.li {
+        width: auto;
+    }
+    
+    
+    
+    
+
+} // end header
+
+/*  ------------- MAIN -------------  */
+main {
+    
+
+/*  ------------- COLUMN LAYOUT -------------  */
+    
+    // you can go to line 178 in css file to see how this looks, the only thing that changes from small file, to medium, to large, is the class name goes from small to medium
+    .row {clear: both;}
+    
+    .column {padding: 0 $gutter;}
+    
+    @for $i from 1 through 12 { // this creates the variable i and loops i from 1 to 12, because 12 is the number of our grid column layout
+        $w: ($i / 12) * 100%; // specifying the width
+        .medium-#{$i} {width: $w; float: left;} //{#$i} is interpolation which will create multiple small classes for us
+    }
+    
+    
+    
+} // end main
+
+
